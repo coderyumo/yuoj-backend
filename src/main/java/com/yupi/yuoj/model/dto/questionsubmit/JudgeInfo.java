@@ -22,7 +22,7 @@ public class JudgeInfo implements Serializable {
     /**
      * 执行消耗的内存
      */
-    private Long memoryLimit;
+    private Long memory;
 
     /**
      * 执行消耗时间

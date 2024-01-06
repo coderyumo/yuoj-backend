@@ -50,7 +50,7 @@ public class QuestionSubmitController {
      * @param request
      * @return questionSubmitId 提交题目的id
      */
-    @PostMapping("/")
+    @PostMapping("/do")
     public BaseResponse<Long> doQuestionSubmit(@RequestBody QuestionSubmitAddRequest questionSubmitAddRequest,
             HttpServletRequest request) {
         if (questionSubmitAddRequest == null || questionSubmitAddRequest.getQuestionId() <= 0) {

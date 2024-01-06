@@ -11,6 +11,10 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
+  jackson:
+    date-format: "yyyy-MM-dd HH:mm:ss"
+    serialization:
+      write-dates-as-timestamps: false
   # session 配置
   session:
     # todo 取消注释开启分布式 session（须先配置 Redis）
@@ -45,7 +49,7 @@ spring:
       max-file-size: 10MB
 server:
   address: 0.0.0.0
-  port: 8121
+  port: 8101
   servlet:
     context-path: /api
     # cookie 30 天过期
@@ -101,3 +105,6 @@ knife4j:
         api-rule: package
         api-rule-resources:
           - com.yupi.yuoj.controller
+# 代码沙箱配置
+codesandbox:
+  value: example
