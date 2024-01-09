@@ -11,7 +11,7 @@ import com.yupi.yuoj.judge.codesandbox.model.ExecuteCodeRequest;
 import com.yupi.yuoj.judge.codesandbox.model.ExecuteCodeResponse;
 import com.yupi.yuoj.judge.codesandbox.strategy.JudgeContext;
 import com.yupi.yuoj.model.dto.question.JudgeCase;
-import com.yupi.yuoj.model.dto.questionsubmit.JudgeInfo;
+import com.yupi.yuoj.judge.codesandbox.model.JudgeInfo;
 import com.yupi.yuoj.model.entity.Question;
 import com.yupi.yuoj.model.entity.QuestionSubmit;
 import com.yupi.yuoj.model.enums.QuestionSubmitStatusEnum;
@@ -40,7 +40,7 @@ public class JudgeServiceImpl implements JudgeService {
     @Resource
     private JudgeManager judgeManager;
 
-    @Value("${codesandbox.type:example}")
+    @Value("${codesandbox.type}")
     private String type;
 
     @Override

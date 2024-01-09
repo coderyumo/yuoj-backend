@@ -107,4 +107,4 @@ knife4j:
           - com.yupi.yuoj.controller
 # 代码沙箱配置
 codesandbox:
-  value: example
+  type: remote

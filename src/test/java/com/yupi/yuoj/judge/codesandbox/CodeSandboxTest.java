@@ -34,8 +34,16 @@ class CodeSandboxTest {
     void codeSandboxProxy(){
         CodeSandbox codeSandbox = CodeSandboxFactory.newInstance(type);
         codeSandbox = new CodeSandboxProxy(codeSandbox);
-        String code = "int main()";
-        List<String> inputString = Arrays.asList("1,2","wm,q");
+        String code = "public class Main {\n" +
+                "\n" +
+                "    public static void main(String[] args) {\n" +
+                "        int a = Integer.parseInt(args[0]);\n" +
+                "        int b = Integer.parseInt(args[1]);\n" +
+                "        System.out.println(\"结果:\" + (a + b));\n" +
+                "    }\n" +
+                "\n" +
+                "}";
+        List<String> inputString = Arrays.asList("1 2","1 3");
         String language = QuestionSubmitLanguageEnum.JAVA.getValue();
         ExecuteCodeRequest executeCodeRequest =  ExecuteCodeRequest.builder()
                 .code(code)
